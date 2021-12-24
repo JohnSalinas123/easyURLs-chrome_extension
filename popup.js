@@ -3,8 +3,8 @@ function logTabs(tabs) {
 
     for(let tab of tabs) {
         let tabBox = makeTabContainer(tab);
-        showTabTitle(tabBox, tab);
-        
+        makeTabTitle(tabBox, tab);
+        makeCopyButton(tabBox,tab);
     }
 };
 
@@ -15,11 +15,17 @@ function makeTabContainer(tab) {
     return newTabBox;
 }
 
-function showTabTitle(tabBox, tab) {
+function makeTabTitle(tabBox, tab) {
     let newParagraph = document.createElement('p');
     let titleText = shortenTitle(tab.title);
     newParagraph.innerHTML = `${titleText}`;
     tabBox.appendChild(newParagraph);
+}
+
+function makeCopyButton(tabBox,tab) {
+    let newCopyButton = document.createElement('button');
+    newCopyButton.innerHTML = 'Copy';
+    tabBox.appendChild(newCopyButton);
 }
 
 function shortenTitle(title) {
