@@ -29,6 +29,12 @@ function makeCopyButton(tabBox,tab) {
     newCopyButton.innerHTML = 'Copy';
     newCopyButton.classList.add('copy_button');
     tabBox.appendChild(newCopyButton);
+    let tabURL = tab.url;
+    newCopyButton.addEventListener('click', function() { copyURL(tabURL); });
+}
+
+function copyURL(urlText) {
+    navigator.clipboard.writeText(`${urlText}`);
 }
 
 function styleTabContainer(tabBox) {
