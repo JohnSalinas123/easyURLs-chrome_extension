@@ -12,6 +12,8 @@ function makeTabContainer(tab) {
     let container = document.getElementById('url_container');
     let newTabBox = document.createElement('div');
     container.appendChild(newTabBox);
+    newTabBox.classList.add("tab_container");
+
     return newTabBox;
 }
 
@@ -25,11 +27,17 @@ function makeTabTitle(tabBox, tab) {
 function makeCopyButton(tabBox,tab) {
     let newCopyButton = document.createElement('button');
     newCopyButton.innerHTML = 'Copy';
+    newCopyButton.classList.add('copy_button');
     tabBox.appendChild(newCopyButton);
 }
 
+function styleTabContainer(tabBox) {
+    tabBox.classList.add("tab_container");
+    
+}
+
 function shortenTitle(title) {
-    return title.slice(0,30) + "...";
+    return title.slice(0,20) + "...";
 }
 
 function onError(error) {
