@@ -27,6 +27,9 @@ p {
     margin-inline-end: 0px;
 }
 
+/* ---------------- */
+/* Extension Title  */
+/* ---------------- */
 
 .title_container {
     display: flex;
@@ -43,4 +46,31 @@ p {
     font-size: 30px;
     font-weight: 700;
     color: white;
+}
+
+/* ---------------- */
+/* Main Container   */
+/* ---------------- */
+
+#url_container {
+    overflow: auto;
+}
+
+.tab_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab_container p {
+    border: 1px solid black;
+    width: 200px;
+    font-size: 15px;
+    font-weight: ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.copy_button {
+    height: 20px;
 }
