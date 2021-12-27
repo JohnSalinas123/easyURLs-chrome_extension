@@ -54,7 +54,7 @@ p {
 /* ---------------- */
 
 #url_container {
-    height: 360px;
+    height: 450px;
     overflow-y: scroll;
 }
 
@@ -67,21 +67,24 @@ p {
 .tab_container p {
     border: 1px solid black;
     width: 200px;
-    font-size: 15px;
+    height: 40px;
+    font-size: 17px;
+    line-height: 35px;
+    vertical-align: center;
+    overflow: hidden;
     font-weight: 400;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.copy_button {
+.square_button {
     height: 40px;
     width: 40px;
     text-align: center;
     padding: 0;
-    
 }
 
-.copy_button img {
+.square_button img {
     height: 30px;
     width: 30px;
     
