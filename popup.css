@@ -37,6 +37,7 @@ p {
     justify-content: center;
     width: auto;
     height: 50px;
+    margin-bottom: 20px;
     text-align: center;
     background-color: var(--brownSugar);
 }
@@ -53,7 +54,8 @@ p {
 /* ---------------- */
 
 #url_container {
-    overflow: auto;
+    height: 360px;
+    overflow-y: scroll;
 }
 
 .tab_container {
@@ -72,5 +74,15 @@ p {
 }
 
 .copy_button {
-    height: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 0;
+    
+}
+
+.copy_button img {
+    height: 30px;
+    width: 30px;
+    
 }
