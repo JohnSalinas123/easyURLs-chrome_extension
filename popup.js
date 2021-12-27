@@ -5,7 +5,8 @@ function logTabs(tabs) {
         if (tab.title != "New Tab") {
            let tabBox = makeTabContainer(tab);
             makeTabTitle(tabBox, tab);
-            makeCopyButton(tabBox,tab); 
+            makeCopyButton(tabBox,tab);
+            makeNavButton(tabBox, tab);
         }
     }
 };
@@ -34,8 +35,20 @@ function makeCopyButton(tabBox,tab) {
     newCopyButton.addEventListener('click', function() { copyURL(tabURL); });
 }
 
+function makeNavButton(tabBox,tab) {
+    let newNavButton = document.createElement('button');
+    newNavButton.innerHTML = 'Nav';
+    tabBox.appendChild(newNavButton);
+    let tabID = tab.id;
+    newNavButton.addEventListener('click', function() { goToTab(tabID) });
+}
+
 function copyURL(urlText) {
     navigator.clipboard.writeText(`${urlText}`);
+}
+
+function goToTab(tabID) {
+    chrome.tabs.update(tabID, {highlighted: true});
 }
 
 function styleTabContainer(tabBox) {
